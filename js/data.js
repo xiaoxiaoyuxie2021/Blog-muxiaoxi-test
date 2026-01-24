@@ -157,13 +157,13 @@ window.articles = [
     }
 ];
 
-// 文章工具方法：根据 slug 或 id 获取文章
+// 根据 slug 或 id 获取文章
 window.getArticleBySlug = function(slugOrId) {
     if (!Array.isArray(window.articles)) return undefined;
     return window.articles.find((item) => item.slug === slugOrId || String(item.id) === String(slugOrId));
 };
 
-// 文章列表渲染（存在 #articleList 时才执行）
+// 文章列表渲染（仅当存在 #articleList 时执行）
 window.renderArticleList = function() {
     const articleList = document.getElementById('articleList');
     if (!articleList || !Array.isArray(window.articles)) return;
@@ -186,7 +186,7 @@ window.renderArticleList = function() {
     articleList.innerHTML = html;
 };
 
-// 文章详情渲染（存在 #articleContent 时才执行）
+// 文章详情渲染（仅当存在 #articleContent 时执行）
 window.renderArticleDetail = function() {
     const contentEl = document.getElementById('articleContent');
     const titleEl = document.getElementById('articleTitle');
