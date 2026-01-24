@@ -1,0 +1,268 @@
+.floating-music-player {
+  position: fixed;
+  bottom: 1.8rem;
+  right: 1.8rem;
+  z-index: 9998;
+  width: 3.7rem;
+  height: 3.7rem;
+  cursor: pointer;
+}
+
+.music-player-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.music-disc {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(244, 143, 177, 0.4);
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotateDisc 20s linear infinite;
+  animation-play-state: paused;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.music-disc.playing {
+  animation-play-state: running;
+}
+
+.music-cover {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.music-center-dot {
+  position: absolute;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.expanded-player {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 19rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(244, 143, 177, 0.3);
+  padding: 1rem;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  z-index: 9999;
+}
+
+.expanded-player.expanded {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.player-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.player-cover {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-right: 0.6rem;
+  flex-shrink: 0;
+}
+
+.player-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.player-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.music-title {
+  font-family: 'Kosugi Maru Regular', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.music-artist {
+  font-family: 'Kosugi Maru Regular', sans-serif;
+  font-size: 0.75rem;
+  color: #666;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 0.6rem;
+}
+
+.player-close {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: #f8f9fa;
+  color: #666;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.player-play {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: #f48fb1;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.player-play:hover {
+    background: #ec4899;
+}
+
+.player-close:hover {
+  background: #fdf2f8;
+  color: #f48fb1;
+}
+
+
+.player-progress {
+  width: 100%;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 0.25rem;
+  -webkit-appearance: none;
+  background: #f0f0f0;
+  border-radius: 2px;
+  outline: none;
+  margin-bottom: 0.3rem;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: #f48fb1;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #ec4899;
+}
+
+.time-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* 旋转动画 */
+@keyframes rotateDisc {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.tutorial-tip {
+  position: fixed;
+  bottom: 6.2rem;
+  right: 1.8rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 0.9rem;
+  box-shadow: 0 5px 20px rgba(244, 143, 177, 0.3);
+  z-index: 10000;
+  max-width: 17.5rem;
+  animation: fadeInUp 0.5s ease;
+}
+
+.tutorial-content p {
+  margin: 5px 0;
+  font-size: 0.8rem;
+  color: #333;
+  line-height: 1.4;
+}
+
+.tutorial-close {
+  margin-top: 0.6rem;
+  padding: 6px 12px;
+  background: #f48fb1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.7rem;
+  transition: background 0.2s;
+}
+
+.tutorial-close:hover {
+  background: #ec4899;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tutorial-tip.hidden {
+  display: none;
+}
+

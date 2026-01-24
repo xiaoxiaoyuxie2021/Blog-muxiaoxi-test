@@ -1,0 +1,106 @@
+.text {
+    font-family: 'Microsoft YaHei', "Times New Roman";
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+    margin: 0.6rem 0;
+}
+
+.text-title-A {
+    font-family: 'Noto Sans SC Bold', "Times New Roman";
+    font-size: 2.1rem;
+    color: #ffc0cb;
+    font-weight: bold;
+    margin: 1.8rem 0 1.2rem 1.2rem;
+    letter-spacing: 0.06rem;
+
+}
+
+
+.text-title-B {
+    font-family: 'Noto Sans SC Regular', "Times New Roman";
+    font-size: 1rem;
+    color: black;
+    font-weight: thin;
+    margin: -0.3rem 0 1.2rem 1.2rem;
+    letter-spacing: 0.06rem;
+}
+
+
+.text-body {
+    font-family: 'Microsoft YaHei', "Times New Roman";
+    font-size: 0.9rem;
+    color: black;
+    line-height: 1.6;
+    margin: 0.6rem 0 0.6rem 0.6rem;
+}
+
+.text-section-title {
+    font-family: 'ZCOOL KuaiLe Regular', "Times New Roman";
+    font-size: 1.8rem;
+    font-weight: light;
+    color: #ffc0cb;
+    border-radius: 10px;
+    margin: 0 0 1rem 0;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    align-items: center;
+}
+
+.text-footer {
+    font-family: 'Microsoft YaHei', "Times New Roman";
+    font-size: 0.7rem;
+    color: black;
+    line-height: 1.6;
+    margin: 0.6rem 0 0.6rem 0.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.text-icon {
+    font-family: 'ZCOOL KuaiLe Regular', "Times New Roman";
+    font-size: 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.text-icon-switchto {
+    font-family: 'ZCOOL KuaiLe Regular', "Times New Roman";
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.text-icon-sm {
+    padding: 0 0 0 1.2rem;
+}
+
+.text-icon-sm-bili {
+    font-size: 1.6rem;
+    color: #00A1D6;
+}
+
+.text-icon-sm-dy {
+    font-size: 1.6rem;
+    color: #fe2c55;
+}
+
+.text-icon-sm-git {
+    font-size: 1.6rem;
+    color: black;
+}
+
+.text-icon-sm-qq {
+    font-size: 1.6rem;
+    color: #12b7f5;
+    cursor: pointer;
+}
+
+.text-icon-sm-wx {
+    font-size: 1.6rem;
+    color: #07c160;
+    cursor: pointer;
+}
+

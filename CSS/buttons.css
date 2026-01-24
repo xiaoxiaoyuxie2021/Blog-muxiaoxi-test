@@ -1,0 +1,179 @@
+.btn-row {
+    display: flex;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12rem;
+
+}
+
+.btn-nav-home {
+    font-family: 'Microsoft YaHei', "Times New Roman";
+    font-size: 1.1rem;
+    color: white;
+    line-height: 1.6;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    background-color: pink;
+    border: none;
+    box-shadow: 2px 2px 5px white;
+    border-radius: 30px;
+    border: white solid 1px;
+    height: 3rem;
+    width: 7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
+
+}
+
+.btn-nav-home:hover {
+    background: rgba(255, 200, 221, 0.95);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-switchto {
+    font-family: 'Microsoft YaHei', "Times New Roman";
+    font-size: 0.9rem;
+    color: white;
+    line-height: 1.6;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.6rem 0.6rem;
+    background-color: pink;
+    border: none;
+    border-radius: 30px;
+    border: white solid 1px;
+    height: 2rem;
+    width: 6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    position: absolute;
+    right: 1.6rem;
+    top: 1.6rem;
+
+}
+
+.btn-switchto:hover {
+    background: rgba(255, 200, 221, 0.95);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-switchto-choice {
+    font-family: 'Microsoft YaHei', "Times New Roman";
+    font-size: 0.9rem;
+    color: black;
+    line-height: 1.6;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.6rem 0.6rem;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-radius: 30px;
+    border: black solid 1px;
+    height: 2rem;
+    width: 6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    margin-top: 1rem;
+    
+}
+
+.btn-friend-link {
+    font-family: 'Microsoft YaHei', 'Times New Roman';
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    background-color: pink;
+    border: none;
+    box-shadow: 2px 2px 5px white;
+    border-radius: 30px;
+    border: white solid 1px;
+    height: 3rem;
+    width: 7.9rem;
+
+}
+
+.btn-submit {
+    font-family: 'ZCOOL KuaiLe Regular', "Times New Roman";
+    font-size: 1.2rem;
+    color: white;
+    line-height: 1.6;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    background-color: pink;
+    border: none;
+    box-shadow: 2px 2px 5px white;
+    border-radius: 30px;
+    border: white solid 1px;
+    height: 3rem;
+    width: 7rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.4s ease;
+
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-backtotop {
+    font-family: 'Microsoft YaHei', "Times New Roman";
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    background-color: pink;
+    box-shadow: 2px 2px 5px white;
+    border-radius: 14px;
+    border: none;
+    height: 3rem;
+    width: 3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    visibility: hidden;
+    transition: all 0.4s ease;
+
+}
+
+.btn-backtotop:hover {
+    background: rgba(255, 200, 221, 0.95);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-backtotop-show {
+    visibility: visible;
+    opacity: 1;
+    animation: bounceInUp 0.5s ease forwards;
+}

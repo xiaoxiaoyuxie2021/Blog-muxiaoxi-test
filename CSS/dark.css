@@ -1,0 +1,90 @@
+html[data-theme="dark"] body {
+  background-color: #07101a;
+  background-image: none;
+  color: #dbe8ff;
+}
+
+html[data-theme="dark"] .glass{
+  background: rgba(8,12,18,0.66);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  color: #dbe8ff;
+}
+
+html[data-theme="dark"] footer{
+  background-color: rgba(255,255,255,0.4);
+}
+
+html[data-theme="dark"] .inner-container{
+  background-color: rgba(255,255,255,0.4);
+}
+
+html[data-theme="dark"] .inner-container-medium{
+  background-color: rgba(255,255,255,0.4);
+}
+
+html[data-theme="dark"] .text,
+html[data-theme="dark"] .text-body,
+html[data-theme="dark"] .text-footer,
+html[data-theme="dark"] .text-title-B{
+  color: white;
+}
+
+html[data-theme="dark"] .text-title-A{
+  color: #ffb7d6;
+}
+
+html[data-theme="dark"] .btn-nav-home{
+  color: white;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  background: rgba(255,255,255,0.02);
+}
+
+html[data-theme="dark"] .btn-nav-home:hover{
+  background: rgba(255,200,221,0.06);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+
+html[data-theme="dark"] .btn-switchto {
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: transparent;
+}
+
+html[data-theme="dark"] .btn-switchto-choice{
+  color: black;
+  border: 1px solid black;
+  background: transparent;
+}
+
+html[data-theme="dark"] .avatar-large{
+  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+}
+
+html[data-theme="dark"] .lightbox{
+  background: rgba(0,0,0,0.95);
+}
+
+html[data-theme="dark"] .music-player-container
+html[data-theme="dark"] .music-disc{
+  background: transparent;
+}
+
+html[data-theme="dark"] .container-stats{
+  background-color: rgba(255,255,255,0.4);
+}
+
+html[data-theme="dark"] .stats-label{
+  color: white;
+}
+
+html[data-theme="dark"] .text-icon-sm-bili { color: white; }
+html[data-theme="dark"] .text-icon-sm-dy { color: white; }
+html[data-theme="dark"] .text-icon-sm-git { color: white; }
+html[data-theme="dark"] .text-icon-sm-qq { color: white; }
+html[data-theme="dark"] .text-icon-sm-wx { color: white; }
+
+
+
+
+

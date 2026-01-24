@@ -1,0 +1,14 @@
+.my-info {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.6rem;
+    margin-top: -8rem;
+}
+
+.avatar-large {
+    width: 9.3rem;
+    height: 9.3rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
