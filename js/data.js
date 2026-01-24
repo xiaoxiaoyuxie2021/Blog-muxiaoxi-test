@@ -139,14 +139,13 @@ window.initCarousel = function(type, prevBtnId, nextBtnId, listId) {
 /*文章列表数据*/
 window.articles = [
     {
-        id: 1,
-        slug: "mua1",
+        id: "mua1",
         title: "制作博客网站的一些心得",
         desc: "为什么会选择制作博客网站？这是因为我希望有一个属于自己的空间，分享我的兴趣和见解，同时也能记录生活中的点滴。",
         time: "2025-12-25",
         cover: "https://picsum.photos/180/120?random=1", // 占位图，替换为自己的封面
         banner: "https://picsum.photos/1080/400?random=10", // 可选文章头图
-        link: "/articles/detail/mua1",
+        link: "article-detail.html?id=mua1",
         meta: {
             views: 0,
             comments: 0
@@ -157,10 +156,10 @@ window.articles = [
     }
 ];
 
-// 根据 slug 或 id 获取文章
-window.getArticleBySlug = function(slugOrId) {
+// 根据 id 获取文章（id 支持 mua1/mua2 等字符串）
+window.getArticleById = function(id) {
     if (!Array.isArray(window.articles)) return undefined;
-    return window.articles.find((item) => item.slug === slugOrId || String(item.id) === String(slugOrId));
+    return window.articles.find((item) => String(item.id) === String(id));
 };
 
 // 文章列表渲染（仅当存在 #articleList 时执行）
@@ -170,7 +169,7 @@ window.renderArticleList = function() {
 
     let html = '';
     window.articles.forEach((article) => {
-        const link = article.link || `/articles/detail/${article.slug || article.id}`;
+        const link = article.link || `article-detail.html?id=${article.id}`;
         html += `
             <div class="article-card">
                 <img src="${article.cover}" alt="${article.title}" class="article-cover">
@@ -198,9 +197,11 @@ window.renderArticleDetail = function() {
     if (!contentEl || !titleEl) return;
 
     const path = window.location.pathname.split('/').filter(Boolean);
-    const rawSlug = path.length ? path[path.length - 1] : '';
-    const slug = rawSlug.replace('.html', '') || new URLSearchParams(window.location.search).get('id');
-    const article = window.getArticleBySlug(slug);
+    const query = new URLSearchParams(window.location.search);
+    const idFromQuery = query.get('id') || query.get('slug');
+    const rawId = path.length ? path[path.length - 1] : '';
+    const id = idFromQuery || rawId.replace('.html', '');
+    const article = window.getArticleById(id);
 
     if (!article) {
         titleEl.textContent = '文章不存在';
