@@ -145,7 +145,7 @@ window.articles = [
         time: "2025-12-25",
         cover: "https://picsum.photos/180/120?random=1", // 占位图，替换为自己的封面
         banner: "https://picsum.photos/1080/400?random=10", // 可选文章头图
-        link: "article-detail.html?id=mua1",
+        link: "article-detail?id=mua1",
         meta: {
             views: 0,
             comments: 0
@@ -169,7 +169,7 @@ window.renderArticleList = function() {
 
     let html = '';
     window.articles.forEach((article) => {
-        const link = article.link || `article-detail.html?id=${article.id}`;
+        const link = article.link || `article-detail?id=${article.id}`;
         html += `
             <div class="article-card">
                 <img src="${article.cover}" alt="${article.title}" class="article-cover">
