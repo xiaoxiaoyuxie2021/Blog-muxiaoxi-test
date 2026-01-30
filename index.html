@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>测试</title>
+    <title>博客网站测试</title>    
 </head>
 <body>
     <h1>测试</h1>
     <p>This is a sample HTML document.</p>
     <p>这是示例网页</p>
-    <a href="/home.html">测试</a>
+    <a href="/home.html" id="test-link">测试</a>
+    <div id="captcha" hidden>
+        <p>人机验证：点击播放后，数清蜂鸣次数并输入数字。</p>
+        <button type="button" id="play-beep">播放蜂鸣</button>
+        <input type="number" id="beep-answer" min="1" max="8" placeholder="次数">
+        <button type="button" id="confirm-answer">确认</button>
+        <button type="button" id="cancel-captcha">取消</button>
+        <p id="captcha-message"></p>
+    </div>
 </body>
+<script src="js/recaptcha.js"></script>
 </html>
